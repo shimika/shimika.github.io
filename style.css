@@ -25,14 +25,39 @@ body {
 .card-wrapper > img {
   width: calc(100% - 10px);
   margin: 5px;
-  border: solid 1px rgba(214, 214, 214, 1);
+  border: solid 1px rgba(0, 0, 0, 1);
   box-shadow: 0 4px 8px 0 rgba(81, 99, 120, 0.4);
   transition: box-shadow 0.2s ease-out;
   border-radius: 12px;
 }
 
-.card-wrapper > img:hover {
-  box-shadow: 0 4px 8px 0 rgba(81, 99, 120, 0.8);
+.not-exist > img {
+  -webkit-filter: grayscale(100%);
+     -moz-filter: grayscale(100%);
+}
+
+.cover {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  left: 5px;
+}
+
+.not-exist > .cover {
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.kirapen > .cover {
+  background-image: url('./image/sign.png');
+  background-position: left -10px bottom 50px;
+  background-size: 50% auto;
+  background-repeat: no-repeat;
+}
+
+.card-wrapper:hover > img {
+  box-shadow: 0 4px 15px 0 rgba(81, 99, 120, 0.8);
 }
 
 @media screen and (max-width: 768px) {
